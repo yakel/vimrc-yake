@@ -1,6 +1,16 @@
-" Common {
+set nocompatible
+filetype off
 
-  set nocompatible
+set rtp+=~/.vim-yake/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
+filetype plugin on
+
+" Common {
 
   syntax on
   filetype plugin indent on
@@ -29,7 +39,6 @@
 
 
   set history=1000
-  set spell
 
 " Esay moving
   " For window
@@ -79,3 +88,8 @@ nnoremap <leader>ev :tabe $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 nnoremap <leader>em :tabe ~/.vim/bundle/vim-snippets/snippets/htmldjango.snippets
+
+
+" Plugins {
+  
+  " Vundle {
