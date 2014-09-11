@@ -1,46 +1,52 @@
-set nocompatible
-filetype off
+" Vundle {
+    set nocompatible
+    filetype off
 
-set rtp+=~/.vim-yake/bundle/Vundle.vim
-call vundle#begin()
+    set rtp+=~/.vim-yake/bundle/Vundle.vim
+    call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-surround'
+    Plugin 'gmarik/Vundle.vim'
+    Plugin 'tpope/vim-surround'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'myusuf3/numbers.vim'
 
-call vundle#end()
-filetype plugin on
+    call vundle#end()
+    filetype plugin on
+" }
 
 " Common {
+    syntax on
+    filetype plugin indent on
 
-  syntax on
-  filetype plugin indent on
+    set number
+    set autoindent
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set expandtab
 
-  set number
-  set autoindent
-  set tabstop=4
-  set softtabstop=4
-  set shiftwidth=4
-  set expandtab
+    set mouse=a
+    set mousehide
+    set cursorline
 
-  set mouse=a
-  set mousehide
-  set cursorline
+    set showmode
+    set showcmd
+    set showmatch
+    set incsearch
+    set hlsearch
+    set ignorecase
+    set smartcase
 
-  set showmode
-  set showcmd
-  set incsearch
-  set hlsearch
-  set ignorecase
-  set smartcase
-
-  set backspace=indent,eol,start
-  set list
-  set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
+    set backspace=indent,eol,start
+    set list
+    set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
 
-  set history=1000
+    set history=1000
+" }
 
-" Esay moving
+" Esay moving {
   " For window
   nmap <C-h> <C-w>h
   nmap <C-j> <C-w>j
@@ -54,8 +60,7 @@ filetype plugin on
   " For horizontal scrolling
   nmap zl zL
   nmap zh zH
-
-  cmap w!! w !sudo tee % >/dev/null
+" }
 
 func! CompileRunGcc()
     exec "w"
@@ -80,16 +85,21 @@ func! CompileRunGcc()
 endfun
 
 map <F5> :call CompileRunGcc()<CR>
+" When forget to sudo
+cmap w!! w !sudo tee % >/dev/null
 
 let mapleader=','
+" Capitalize the previous staying Insert Mode
 inoremap <leader>u <Esc>bgUiwea
-
+" Maps for changing configure conveniently
 nnoremap <leader>ev :tabe $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-nnoremap <leader>em :tabe ~/.vim/bundle/vim-snippets/snippets/htmldjango.snippets
-
-
 " Plugins {
-  
-  " Vundle {
+
+    " NERDTree {
+
+    " }
+
+
+" }
