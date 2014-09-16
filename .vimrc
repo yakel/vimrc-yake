@@ -10,6 +10,7 @@
     Plugin 'scrooloose/nerdtree'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'myusuf3/numbers.vim'
+    Plugin 'altercation/vim-colors-solarized'
 
     call vundle#end()
     filetype plugin on
@@ -21,10 +22,13 @@
 
     set number
     set autoindent
+
+    " About the behavior of 'tab'
+    set expandtab
     set tabstop=4
     set softtabstop=4
     set shiftwidth=4
-    set expandtab
+    set shiftround
 
     set mouse=a
     set mousehide
@@ -33,15 +37,20 @@
     set showmode
     set showcmd
     set showmatch
+    set matchtime=1
     set incsearch
     set hlsearch
     set ignorecase
     set smartcase
 
     set backspace=indent,eol,start
+    set autoread
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
+    set laststatus=2    " Alway show the statusline
+
+    colorscheme desert
 
     set history=1000
 " }
@@ -70,9 +79,6 @@ func! CompileRunGcc()
     elseif &filetype == 'cpp'
         exec "!g++ % -o %< -lm -DLOCAL"
         exec "! ./%<"
-    elseif &filetype == 'java'
-        exec "!javac %"
-        exec "!java Main"
     elseif &filetype == 'python'
         exec "!chmod u+x %"
         exec "! ./%"
