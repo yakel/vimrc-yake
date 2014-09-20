@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -10,6 +9,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
 
 call vundle#end()
 filetype plugin on

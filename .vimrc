@@ -1,5 +1,12 @@
-" Use bundles config
-  source ~/.vimrc.bundles
+" Basic {
+    set nocompatible
+" }
+
+" Use bundles config {
+    "if filereadable("~/.vimrc.bundles")
+        source ~/.vimrc.bundles
+    "endif
+" }
 
 " Common {
     syntax on
@@ -15,9 +22,16 @@
     set shiftwidth=4
     set shiftround
 
-    set mouse=a
-    set mousehide
+    " Mouse {
+        if has('mouse')
+            set mouse=a
+        endif
+        set mousehide
+    " }
     set cursorline
+
+    set splitright      " Puts new windows to right
+    set splitbelow      " Puts new windows to below
 
     set showmode
     set showcmd
@@ -30,16 +44,19 @@
 
     set backspace=indent,eol,start
     set autoread
+    set autowrite
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
     " Statusline {
-        set laststatus=2    " Alway show the statusline
+        if has('statusline')
+            set laststatus=2        " Alway show the statusline
 
-        set statusline=%f       " Path to file
-        set statusline+=%y      " Filetype
-        set statusline+=%=      " Align right
-        set statusline+=%l,%c\ \(%p%%\)
+            set statusline=%f       " Path to file
+            set statusline+=%y      " Filetype
+            set statusline+=%=      " Align right
+            set statusline+=%l,%c\ \(%p%%,%L\)
+        endif
     " }
     colorscheme desert
 
@@ -47,19 +64,22 @@
 " }
 
 " Esay moving {
-  " For window
-  nmap <C-h> <C-w>h
-  nmap <C-j> <C-w>j
-  nmap <C-k> <C-w>k
-  nmap <C-l> <C-w>l
+    " For window {
+        nmap <C-h> <C-w>h
+        nmap <C-j> <C-w>j
+        nmap <C-k> <C-w>k
+        nmap <C-l> <C-w>l
+    " }
 
-  " For tab
-  nmap <S-h> gT
-  nmap <S-l> gt
+    " For tab {
+        nmap <S-h> gT
+        nmap <S-l> gt
+    " }
 
-  " For horizontal scrolling
-  nmap zl zL
-  nmap zh zH
+    " For horizontal scrolling {
+        nmap zl zL
+        nmap zh zH
+    " {
 " }
 
 func! CompileRunGcc()
@@ -93,10 +113,6 @@ nnoremap <leader>ev :tabe $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Plugins {
-
     " NERDTree {
-
     " }
-
-
 " }
