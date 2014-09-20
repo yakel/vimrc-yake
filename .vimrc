@@ -1,20 +1,5 @@
-" Vundle {
-    set nocompatible
-    filetype off
-
-    set rtp+=~/.vim-yake/bundle/Vundle.vim
-    call vundle#begin()
-
-    Plugin 'gmarik/Vundle.vim'
-    Plugin 'tpope/vim-surround'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/nerdcommenter'
-    Plugin 'myusuf3/numbers.vim'
-    Plugin 'altercation/vim-colors-solarized'
-
-    call vundle#end()
-    filetype plugin on
-" }
+" Use bundles config 
+  source ~/.vimrc.bundles
 
 " Common {
     syntax on
