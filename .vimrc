@@ -1,4 +1,4 @@
-" Use bundles config 
+" Use bundles config
   source ~/.vimrc.bundles
 
 " Common {
@@ -33,8 +33,14 @@
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
-    set laststatus=2    " Alway show the statusline
+    " Statusline {
+        set laststatus=2    " Alway show the statusline
 
+        set statusline=%f       " Path to file
+        set statusline+=%y      " Filetype
+        set statusline+=%=      " Align right
+        set statusline+=%l,%c\ \(%p%%\)
+    " }
     colorscheme desert
 
     set history=1000
