@@ -13,3 +13,5 @@ It is still in development.
 * Number
 * Colorscheme: solarized
 * HTML-AutoCloseTag
+* Syntastic
+* AutoClose
