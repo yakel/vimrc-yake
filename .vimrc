@@ -12,41 +12,22 @@
     syntax on
     filetype plugin indent on
 
-    set number
-    set autoindent
+    " UI {
+        set number
+        set numberwidth=4
 
-    " About the behavior of 'tab'
-    set expandtab
-    set tabstop=4
-    set softtabstop=4
-    set shiftwidth=4
-    set shiftround
+        set list
+        set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
-    " Mouse {
-        if has('mouse')
-            set mouse=a
-        endif
-        set mousehide
+        set cursorline
+        set showmatch
+        set matchtime=1
+
+        set showmode
+        set showcmd
+
+        colorscheme desert
     " }
-    set cursorline
-
-    set splitright      " Puts new windows to right
-    set splitbelow      " Puts new windows to below
-
-    set showmode
-    set showcmd
-    set showmatch
-    set matchtime=1
-    set incsearch
-    set hlsearch
-    set ignorecase
-    set smartcase
-
-    set backspace=indent,eol,start
-    set autoread
-    set autowrite
-    set list
-    set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
     " Statusline {
         if has('statusline')
@@ -58,9 +39,43 @@
             set statusline+=%l,%c\ \(%p%%,%L\)
         endif
     " }
-    colorscheme desert
 
-    set history=1000
+    " Tab {
+        set expandtab
+        set tabstop=4
+        set softtabstop=4
+    " }
+
+    " Shift {
+        set shiftwidth=4
+        set shiftround
+    " }
+
+    " Mouse {
+        if has('mouse')
+            set mouse=a
+        endif
+        set mousehide
+    " }
+
+    " Function {
+        set autoindent
+
+        set incsearch
+        set hlsearch
+        set ignorecase
+        set smartcase
+
+        set history=1000
+
+        set backspace=indent,eol,start
+        set autoread
+        set autowrite
+
+        set splitright      " Puts new windows to right
+        set splitbelow      " Puts new windows to below
+    " }
+
 " }
 
 " Esay moving {
@@ -101,16 +116,24 @@ func! CompileRunGcc()
     endif
 endfun
 
-map <F5> :call CompileRunGcc()<CR>
-" When forget to sudo
-cmap w!! w !sudo tee % >/dev/null
+" Mapping {
 
-let mapleader=','
-" Capitalize the previous staying Insert Mode
-inoremap <leader>u <Esc>bgUiwea
-" Maps for changing configure conveniently
-nnoremap <leader>ev :tabe $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+    let mapleader=','
+
+    map <F5> :call CompileRunGcc()<CR>
+
+    " When forget to sudo
+    cmap w!! w !sudo tee % >/dev/null
+
+    " Capitalize the previous staying Insert Mode
+    inoremap <leader>u <Esc>bgUiwea
+
+    " Maps for changing configure conveniently {
+        nnoremap <leader>ev :tabe $MYVIMRC<CR>
+        nnoremap <leader>sv :source $MYVIMRC<CR>
+    " }
+
+" }
 
 " Plugins {
     " NERDTree {

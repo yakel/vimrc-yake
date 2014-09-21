@@ -1,6 +1,6 @@
 # Introduce
 
-This is my vimrc configure, referring to spf13's vimrc.
+This is my vimrc configure based on Vim74, referring to spf13's vimrc.
 
 It is still in development.
 
@@ -12,3 +12,4 @@ It is still in development.
 * Surround
 * Number
 * Colorscheme: solarized
+* HTML-AutoCloseTag
