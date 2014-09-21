@@ -97,30 +97,9 @@
     " {
 " }
 
-func! CompileRunGcc()
-    exec "w"
-    if &filetype == 'c'
-        exec "!gcc % -o %< -lm -ansi -DLOCAL"
-        exec "! ./%<"
-    elseif &filetype == 'cpp'
-        exec "!g++ % -o %< -lm -DLOCAL"
-        exec "! ./%<"
-    elseif &filetype == 'python'
-        exec "!chmod u+x %"
-        exec "! ./%"
-    elseif &filetype == 'sh'
-        exec "!chmod u+x %"
-        exec "!./%"
-    elseif &filetype == 'html'
-        exec "!firefox ./% &> /dev/null &"
-    endif
-endfun
-
 " Mapping {
 
     let mapleader=','
-
-    map <F5> :call CompileRunGcc()<CR>
 
     " When forget to sudo
     cmap w!! w !sudo tee % >/dev/null

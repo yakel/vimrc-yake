@@ -12,6 +12,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 Plugin 'spf13/vim-autoclose'
+Plugin 'greyblake/vim-preview'
 
 call vundle#end()
 filetype plugin on
