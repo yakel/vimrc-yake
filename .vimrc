@@ -13,6 +13,8 @@
     filetype plugin indent on
 
     " UI {
+        set background=dark
+
         set number
         set numberwidth=4
 
@@ -74,16 +76,23 @@
 
         set splitright      " Puts new windows to right
         set splitbelow      " Puts new windows to below
+
+        set wildmenu
+        set wildmode=list:longest,full
+        set winminheight=0
+        set scrolljump=5
+        set scrolloff=3
+        set foldenable
     " }
 
 " }
 
 " Esay moving {
     " For window {
-        nmap <C-h> <C-w>h
-        nmap <C-j> <C-w>j
-        nmap <C-k> <C-w>k
-        nmap <C-l> <C-w>l
+        nmap <C-h> <C-w>h<C-w>_
+        nmap <C-j> <C-w>j<C-w>_
+        nmap <C-k> <C-w>k<C-w>_
+        nmap <C-l> <C-w>l<C-w>_
     " }
 
     " For tab {
@@ -95,11 +104,16 @@
         nmap zl zL
         nmap zh zH
     " {
+
+    " Fix beheavior of Y to be consistent with C, D
+    nnoremap Y y$
+    nmap <leader>/ :nohlsearch<CR>
 " }
 
 " Mapping {
 
     let mapleader=','
+    let maplocalleader='_'
 
     " When forget to sudo
     cmap w!! w !sudo tee % >/dev/null
