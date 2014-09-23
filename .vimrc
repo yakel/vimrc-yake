@@ -130,5 +130,10 @@
 
 " Plugins {
     " NERDTree {
+        map <C-e> :NERDTreeToggle<CR>
+
+        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git']
+        let NERDTreeQuitOnOpen=1
+        let NERDTreeShowLineNumbers=1
     " }
 " }

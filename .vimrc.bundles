@@ -12,7 +12,17 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 Plugin 'spf13/vim-autoclose'
+Plugin 'majutsushi/tagbar'
 Plugin 'greyblake/vim-preview'
+
+" Some plugins which may be used in future
+" To add {
+
+" Plugin 'mbbill/undotree'
+" Plugin 'Lokaltog/vim-esaymotion'
+" Plugin 'godlygeek/tabular'
+
+" }
 
 call vundle#end()
 filetype plugin on
