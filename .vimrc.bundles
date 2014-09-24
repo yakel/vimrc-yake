@@ -1,27 +1,31 @@
-filetype off
+" Setup Vundle Support {
+    filetype off
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+" }
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" General {
+    Plugin 'gmarik/Vundle.vim'
+    Plugin 'tpope/vim-surround'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'myusuf3/numbers.vim'
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'scrooloose/syntastic'
+    Plugin 'spf13/vim-autoclose'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'nathanaelkane/vim-indent-guides'
+" }
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-scripts/HTML-AutoCloseTag'
-Plugin 'spf13/vim-autoclose'
-Plugin 'majutsushi/tagbar'
-Plugin 'greyblake/vim-preview'
+" HTML {
+    Plugin 'vim-scripts/HTML-AutoCloseTag'
+" }
 
-" Some plugins which may be used in future
-" To add {
-
-" Plugin 'mbbill/undotree'
-" Plugin 'Lokaltog/vim-esaymotion'
-" Plugin 'godlygeek/tabular'
-
+" Candidate {
+    " Plugin 'mbbill/undotree'
+    " Plugin 'Lokaltog/vim-esaymotion'
+    " Plugin 'godlygeek/tabular'
+    " Plugin 'greyblake/vim-preview'
 " }
 
 call vundle#end()
