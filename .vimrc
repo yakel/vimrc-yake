@@ -3,9 +3,9 @@
 " }
 
 " Use bundles config {
-    "if filereadable("~/.vimrc.bundles")
+    if filereadable(expand("~/.vimrc.bundles"))
         source ~/.vimrc.bundles
-    "endif
+    endif
 " }
 
 " Common {
@@ -28,7 +28,12 @@
         set showmode
         set showcmd
 
-        colorscheme desert
+        " Solarized {
+            set t_Co=16
+            let g:solarized_termcolors=256
+            let g:solarized_termtrans=1
+            colorscheme solarized
+        " }
     " }
 
     " Statusline {
@@ -89,10 +94,10 @@
 
 " Esay moving {
     " For window {
-        nmap <C-h> <C-w>h<C-w>_
-        nmap <C-j> <C-w>j<C-w>_
-        nmap <C-k> <C-w>k<C-w>_
-        nmap <C-l> <C-w>l<C-w>_
+        nmap <C-h> <C-w>h
+        nmap <C-j> <C-w>j
+        nmap <C-k> <C-w>k
+        nmap <C-l> <C-w>l
     " }
 
     " For tab {
@@ -107,7 +112,6 @@
 
     " Fix beheavior of Y to be consistent with C, D
     nnoremap Y y$
-    nmap <leader>/ :nohlsearch<CR>
 " }
 
 " Mapping {
@@ -121,6 +125,9 @@
     " Capitalize the previous staying Insert Mode
     inoremap <leader>u <Esc>bgUiwea
 
+    nmap <leader>wt <C-w>T
+    nmap <leader>/ :nohlsearch<CR>
+
     " Maps for changing configure conveniently {
         nnoremap <leader>ev :tabe $MYVIMRC<CR>
         nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -129,6 +136,7 @@
 " }
 
 " Plugins {
+
     " NERDTree {
         map <C-e> :NERDTreeToggle<CR>
 
@@ -136,4 +144,27 @@
         let NERDTreeQuitOnOpen=1
         let NERDTreeShowLineNumbers=1
     " }
+
+    " Tagbar {
+        nnoremap <leader>tt :TagbarToggle<CR>
+    " }
+
+    " AutoCloseTag {
+        nmap <leader>ac <Plug>ToggleAutoCloseMappings
+    " }
+
+    " indent-guides {
+        let g:indent_guides_guide_size = 1
+        let g:indent_guides_enable_on_vim_startup = 1
+        let g:indent_guides_start_level = 2
+
+        let g:indent_guides_auto_colors = 0
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
+    " }
+
+    " NERDCommenter {
+        let NERDSpaceDelims = 1
+    " }
+
 " }
