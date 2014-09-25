@@ -11,29 +11,29 @@
 " Common {
     syntax on
     filetype plugin indent on
+" }
 
-    " UI {
-        set background=dark
+" UI {
+    set background=dark
 
-        set number
-        set numberwidth=4
+    set number
+    set numberwidth=4
 
-        set list
-        set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
+    set list
+    set listchars=tab:›\ ,trail:•,extends:#,nbsp:. 
 
-        set cursorline
-        set showmatch
-        set matchtime=1
+    set cursorline
+    set showmatch
+    set matchtime=1
 
-        set showmode
-        set showcmd
+    set showmode
+    set showcmd
 
-        " Solarized {
-            set t_Co=16
-            let g:solarized_termcolors=256
-            let g:solarized_termtrans=1
-            colorscheme solarized
-        " }
+    " colorscheme: Solarized {
+        set t_Co=16
+        let g:solarized_termcolors=256
+        let g:solarized_termtrans=1
+        colorscheme solarized
     " }
 
     " Statusline {
@@ -47,6 +47,12 @@
         endif
     " }
 
+" }
+
+" Formatting {
+    set autoindent
+    set nowrap
+
     " Tab {
         set expandtab
         set tabstop=4
@@ -57,6 +63,34 @@
         set shiftwidth=4
         set shiftround
     " }
+" }
+
+
+" Configure {
+
+    set incsearch
+    set hlsearch
+    set ignorecase
+    set smartcase
+
+    set history=1000
+
+    set backspace=indent,eol,start
+    set autoread
+    set autowrite
+
+    set splitright
+    set splitbelow
+
+    set wildmenu
+    set wildmode=list:longest,full
+    set winminheight=0
+    set scrolljump=5
+    set scrolloff=3
+    set foldenable
+
+    " Fix beheavior of Y to be consistent with C, D
+    nnoremap Y y$
 
     " Mouse {
         if has('mouse')
@@ -64,31 +98,7 @@
         endif
         set mousehide
     " }
-
-    " Function {
-        set autoindent
-
-        set incsearch
-        set hlsearch
-        set ignorecase
-        set smartcase
-
-        set history=1000
-
-        set backspace=indent,eol,start
-        set autoread
-        set autowrite
-
-        set splitright      " Puts new windows to right
-        set splitbelow      " Puts new windows to below
-
-        set wildmenu
-        set wildmode=list:longest,full
-        set winminheight=0
-        set scrolljump=5
-        set scrolloff=3
-        set foldenable
-    " }
+" }
 
 " }
 
@@ -109,9 +119,6 @@
         nmap zl zL
         nmap zh zH
     " {
-
-    " Fix beheavior of Y to be consistent with C, D
-    nnoremap Y y$
 " }
 
 " Mapping {
@@ -123,14 +130,14 @@
     cmap w!! w !sudo tee % >/dev/null
 
     " Capitalize the previous staying Insert Mode
-    inoremap <leader>u <Esc>bgUiwea
+    inoremap <Leader>u <Esc>bgUiwea
 
-    nmap <leader>wt <C-w>T
-    nmap <leader>/ :nohlsearch<CR>
+    nmap <Leader>wt <C-w>T
+    nmap <Leader>/ :nohlsearch<CR>
 
     " Maps for changing configure conveniently {
-        nnoremap <leader>ev :tabe $MYVIMRC<CR>
-        nnoremap <leader>sv :source $MYVIMRC<CR>
+        nnoremap <Leader>ev :tabe $MYVIMRC<CR>
+        nnoremap <Leader>sv :source $MYVIMRC<CR>
     " }
 
 " }
@@ -146,11 +153,11 @@
     " }
 
     " Tagbar {
-        nnoremap <leader>tt :TagbarToggle<CR>
+        nnoremap <Leader>tt :TagbarToggle<CR>
     " }
 
     " AutoCloseTag {
-        nmap <leader>ac <Plug>ToggleAutoCloseMappings
+        nmap <Leader>ac <Plug>ToggleAutoCloseMappings
     " }
 
     " indent-guides {

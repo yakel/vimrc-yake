@@ -15,6 +15,8 @@
     Plugin 'spf13/vim-autoclose'
     Plugin 'majutsushi/tagbar'
     Plugin 'nathanaelkane/vim-indent-guides'
+    Plugin 'vim-scripts/matchit.zip'
+    Plugin 'terryma/vim-multiple-cursors'
 " }
 
 " HTML {
