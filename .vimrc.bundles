@@ -6,9 +6,9 @@
 
 " General {
     Plugin 'gmarik/Vundle.vim'
-    Plugin 'tpope/vim-surround'
     Plugin 'scrooloose/nerdtree'
     Plugin 'scrooloose/nerdcommenter'
+    Plugin 'tpope/vim-surround'
     Plugin 'myusuf3/numbers.vim'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'scrooloose/syntastic'
