@@ -17,6 +17,8 @@
     Plugin 'nathanaelkane/vim-indent-guides'
     Plugin 'vim-scripts/matchit.zip'
     Plugin 'terryma/vim-multiple-cursors'
+    Plugin 'Shougo/neocomplete.vim'
+    Plugin 'Lokaltog/vim-easymotion'
 " }
 
 " HTML {
@@ -25,9 +27,10 @@
 
 " Candidate {
     " Plugin 'mbbill/undotree'
-    " Plugin 'Lokaltog/vim-esaymotion'
     " Plugin 'godlygeek/tabular'
     " Plugin 'greyblake/vim-preview'
+    " Plugin 'mattn/emmet-vim'
+    " Plugin 'kien/ctrlp.vim'
 " }
 
 call vundle#end()
