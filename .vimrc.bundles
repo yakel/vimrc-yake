@@ -17,8 +17,17 @@
     Plugin 'nathanaelkane/vim-indent-guides'
     Plugin 'vim-scripts/matchit.zip'
     Plugin 'terryma/vim-multiple-cursors'
-    Plugin 'Shougo/neocomplete.vim'
+    " Plugin 'Shougo/neocomplete.vim'
     Plugin 'Lokaltog/vim-easymotion'
+" }
+
+" Snippets {
+    " Dependencies of snipmate
+    Plugin 'MarcWeber/vim-addon-mw-utils'
+    Plugin 'tomtom/tlib_vim'
+
+    Plugin 'garbas/vim-snipmate'
+    Plugin 'honza/vim-snippets'
 " }
 
 " HTML {
