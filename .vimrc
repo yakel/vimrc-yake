@@ -1,5 +1,7 @@
 " Basic {
     set nocompatible
+
+    filetype plugin indent on
 " }
 
 " Use bundles config {
@@ -8,13 +10,9 @@
     endif
 " }
 
-" Common {
-    syntax on
-    filetype plugin indent on
-" }
-
 " UI {
     set background=dark
+    syntax on
 
     set number
     set numberwidth=4

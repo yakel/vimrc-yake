@@ -24,6 +24,9 @@
 " HTML {
     Plugin 'vim-scripts/HTML-AutoCloseTag'
 " }
+" Python {
+    Plugin 'klen/python-mode'
+" }
 
 " Candidate {
     " Plugin 'mbbill/undotree'
@@ -34,4 +37,4 @@
 " }
 
 call vundle#end()
-filetype plugin on
+filetype on
