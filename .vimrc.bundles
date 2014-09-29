@@ -33,8 +33,13 @@
 " HTML {
     Plugin 'vim-scripts/HTML-AutoCloseTag'
 " }
+
 " Python {
     Plugin 'klen/python-mode'
+" }
+
+" Markdown {
+    Plugin 'suan/vim-instant-markdown'
 " }
 
 " Candidate {

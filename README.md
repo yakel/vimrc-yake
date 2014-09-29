@@ -8,7 +8,10 @@ It is still in development.
 
 * Vundle: A plugin to manage plugins
 * NERDTree
-    * <CTRL-E> to toggle NERDTree
+
+        Usage:
+             <CTRL-E> to toggle NERDTree
+
 * NERDCommenter
 * Surround
 * Number
@@ -16,9 +19,14 @@ It is still in development.
 * Syntastic
 * AutoClose
 * Tagbar
-    * <Leader>tt to toggle Tarbar
+
+        Usage:
+            <Leader>tt to toggle Tarbar
+
 * indent-guides
 * matchit
 * multiple-cursors
 * HTML-AutoCloseTag
-    * <Leader>ac to toggle AutoCloseTag
+
+        Usage:
+            <Leader>ac to toggle AutoCloseTag
