@@ -19,6 +19,7 @@
     Plugin 'terryma/vim-multiple-cursors'
     " Plugin 'Shougo/neocomplete.vim'
     Plugin 'Lokaltog/vim-easymotion'
+    Plugin 'tpope/vim-fugitive'
 " }
 
 " Snippets {
@@ -45,9 +46,13 @@
 " Candidate {
     " Plugin 'mbbill/undotree'
     " Plugin 'godlygeek/tabular'
-    " Plugin 'greyblake/vim-preview'
     " Plugin 'mattn/emmet-vim'
     " Plugin 'kien/ctrlp.vim'
+    " Plugin 'SirVer/ultisnips'
+" }
+
+" Ever {
+    " Plugin 'greyblake/vim-preview'
 " }
 
 call vundle#end()
