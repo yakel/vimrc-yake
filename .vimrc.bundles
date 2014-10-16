@@ -7,14 +7,36 @@
 " General {
     Plugin 'gmarik/Vundle.vim'
     Plugin 'scrooloose/nerdtree'
+    " NERDTree {
+        map <C-e> :NERDTreeToggle<CR>
+
+        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git']
+        let NERDTreeQuitOnOpen=1
+        let NERDTreeShowLineNumbers=1
+    " }
     Plugin 'scrooloose/nerdcommenter'
+    " NERDCommenter {
+        let NERDSpaceDelims = 1
+    " }
     Plugin 'tpope/vim-surround'
     Plugin 'myusuf3/numbers.vim'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'scrooloose/syntastic'
    " Plugin 'spf13/vim-autoclose'
     Plugin 'majutsushi/tagbar'
-    Plugin 'nathanaelkane/vim-indent-guides'
+        " Tagbar {
+            nnoremap <Leader>tt :TagbarToggle<CR>
+        " }
+    Plugin 'nathanaelkane/vim-indent-guides'"{{{
+    " indent-guides {
+        let g:indent_guides_guide_size = 1
+        let g:indent_guides_enable_on_vim_startup = 1
+        let g:indent_guides_start_level = 2
+
+        let g:indent_guides_auto_colors = 0
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
+    " }"}}}
     Plugin 'vim-scripts/matchit.zip'
     Plugin 'terryma/vim-multiple-cursors'
     " Plugin 'Shougo/neocomplete.vim'
@@ -36,6 +58,9 @@
 
 " HTML {
     Plugin 'vim-scripts/HTML-AutoCloseTag'
+    " AutoCloseTag {
+        nmap <Leader>ac <Plug>ToggleAutoCloseMappings
+    " }
 " }
 
 " Python {
@@ -51,7 +76,6 @@
     " Plugin 'godlygeek/tabular'
     " Plugin 'mattn/emmet-vim'
     " Plugin 'kien/ctrlp.vim'
-    " Plugin 'SirVer/ultisnips'
 " }
 
 " Ever {
@@ -60,3 +84,5 @@
 
 call vundle#end()
 filetype on
+
+" Modeline vim: foldmethod=marker
