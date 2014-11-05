@@ -64,7 +64,7 @@
 " }
 
 " Python {
-    Plugin 'klen/python-mode'
+    " Plugin 'klen/python-mode'
 " }
 
 " Markdown {
