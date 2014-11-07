@@ -22,7 +22,7 @@
     Plugin 'myusuf3/numbers.vim'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'scrooloose/syntastic'
-   " Plugin 'spf13/vim-autoclose'
+    Plugin 'spf13/vim-autoclose'
     Plugin 'majutsushi/tagbar'
         " Tagbar {
             nnoremap <Leader>tt :TagbarToggle<CR>
@@ -75,7 +75,7 @@
     " Plugin 'mbbill/undotree'
     " Plugin 'godlygeek/tabular'
     " Plugin 'mattn/emmet-vim'
-    " Plugin 'kien/ctrlp.vim'
+    Plugin 'kien/ctrlp.vim'
 " }
 
 " Ever {
