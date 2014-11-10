@@ -62,6 +62,10 @@
         nmap <Leader>ac <Plug>ToggleAutoCloseMappings
     " }
 " }
+" Rails {
+    Plugin 'tpope/vim-rails'
+    Plugin 'tpope/vim-bundler'
+" }
 
 " Python {
     " Plugin 'klen/python-mode'
