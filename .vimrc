@@ -88,7 +88,7 @@
     " Fix beheavior of Y to be consistent with C, D
     nnoremap Y y$
 
-    autocmd BufEnter * lcd %:p:h
+    " autocmd BufEnter * lcd %:p:h
 
     " Mouse {
         if has('mouse')
@@ -133,11 +133,6 @@
 
     nmap <Leader>wt <C-w>T
     nmap <Leader>/ :nohlsearch<CR>
-
-    " Maps for changing configure conveniently {
-        nnoremap <Leader>ev :tabe $MYVIMRC<CR>
-        nnoremap <Leader>sv :source $MYVIMRC<CR>
-    " }
 " }
 
 " Modeline vim: tw=78 foldmethod=indent foldlevel=1
