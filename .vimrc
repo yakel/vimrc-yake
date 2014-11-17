@@ -123,7 +123,7 @@
     let maplocalleader='_'
 
     " When forget to sudo
-    cmap w!! w !sudo tee % >/dev/null
+    cnoremap w!! w !sudo tee % >/dev/null
 
     " Capitalize the previous staying Insert Mode
     inoremap <Leader>u <Esc>bgUiwea
@@ -133,6 +133,37 @@
 
     nmap <Leader>wt <C-w>T
     nmap <Leader>/ :nohlsearch<CR>
+" }
+" Plugin {
+    " NERDTree {
+        map <C-e> :NERDTreeToggle<CR>
+
+        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git']
+        let NERDTreeQuitOnOpen=1
+        let NERDTreeShowLineNumbers=1
+    " }
+
+    " NERDCommenter {
+        let NERDSpaceDelims = 1
+    " }
+
+    " Tagbar {
+        nnoremap <Leader>tt :TagbarToggle<CR>
+    " }
+
+    " indent-guides {
+        let g:indent_guides_guide_size = 1
+        let g:indent_guides_enable_on_vim_startup = 1
+        let g:indent_guides_start_level = 2
+
+        let g:indent_guides_auto_colors = 0
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
+    " }
+
+    " AutoCloseTag {
+        nmap <Leader>ac <Plug>ToggleAutoCloseMappings
+    " }
 " }
 
 " Modeline vim: tw=78 foldmethod=indent foldlevel=1

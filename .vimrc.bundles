@@ -7,40 +7,18 @@
 " General {
     Plugin 'gmarik/Vundle.vim'
     Plugin 'scrooloose/nerdtree'
-    " NERDTree {
-        map <C-e> :NERDTreeToggle<CR>
-
-        let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git']
-        let NERDTreeQuitOnOpen=1
-        let NERDTreeShowLineNumbers=1
-    " }
     Plugin 'scrooloose/nerdcommenter'
-    " NERDCommenter {
-        let NERDSpaceDelims = 1
-    " }
     Plugin 'tpope/vim-surround'
     Plugin 'myusuf3/numbers.vim'
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'scrooloose/syntastic'
     Plugin 'spf13/vim-autoclose'
     Plugin 'majutsushi/tagbar'
-        " Tagbar {
-            nnoremap <Leader>tt :TagbarToggle<CR>
-        " }
-    Plugin 'nathanaelkane/vim-indent-guides'"{{{
-    " indent-guides {
-        let g:indent_guides_guide_size = 1
-        let g:indent_guides_enable_on_vim_startup = 1
-        let g:indent_guides_start_level = 2
-
-        let g:indent_guides_auto_colors = 0
-        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
-    " }"}}}
+    Plugin 'nathanaelkane/vim-indent-guides'
     Plugin 'vim-scripts/matchit.zip'
     Plugin 'terryma/vim-multiple-cursors'
-    " Plugin 'Shougo/neocomplete.vim'
     Plugin 'Lokaltog/vim-easymotion'
+    Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-fugitive'
 " }
 
@@ -52,23 +30,18 @@
 
         " Plugin 'garbas/vim-snipmate'
     " }
+
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
 " }
 
 " HTML {
     Plugin 'vim-scripts/HTML-AutoCloseTag'
-    " AutoCloseTag {
-        nmap <Leader>ac <Plug>ToggleAutoCloseMappings
-    " }
 " }
+
 " Rails {
     Plugin 'tpope/vim-rails'
     Plugin 'tpope/vim-bundler'
-" }
-
-" Python {
-    " Plugin 'klen/python-mode'
 " }
 
 " Markdown {
@@ -79,11 +52,12 @@
     " Plugin 'mbbill/undotree'
     " Plugin 'godlygeek/tabular'
     " Plugin 'mattn/emmet-vim'
-    Plugin 'kien/ctrlp.vim'
 " }
 
 " Ever {
+    " Plugin 'Shougo/neocomplete.vim'
     " Plugin 'greyblake/vim-preview'
+    " Plugin 'klen/python-mode'       " Python
 " }
 
 call vundle#end()
