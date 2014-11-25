@@ -25,18 +25,14 @@
 " Snippets {
     " SnipMate {
         " Dependencies of snipmate
-        " Plugin 'MarcWeber/vim-addon-mw-utils'
-        " Plugin 'tomtom/tlib_vim'
+        Plugin 'MarcWeber/vim-addon-mw-utils'
+        Plugin 'tomtom/tlib_vim'
 
-        " Plugin 'garbas/vim-snipmate'
+        Plugin 'garbas/vim-snipmate'
     " }
 
-    Plugin 'SirVer/ultisnips'
+    " Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
-" }
-
-" HTML {
-    Plugin 'vim-scripts/HTML-AutoCloseTag'
 " }
 
 " Rails {
@@ -58,6 +54,7 @@
     " Plugin 'Shougo/neocomplete.vim'
     " Plugin 'greyblake/vim-preview'
     " Plugin 'klen/python-mode'       " Python
+    " Plugin 'vim-scripts/HTML-AutoCloseTag'    " HTML
 " }
 
 call vundle#end()
