@@ -140,6 +140,7 @@
 " Plugin {
     " NERDTree {
         map <C-e> :NERDTreeToggle<CR>
+        map <Leader>e :NERDTreeFind<CR>
 
         let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git']
         let NERDTreeQuitOnOpen=1
