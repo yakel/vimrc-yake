@@ -1,3 +1,4 @@
+mv ../vimrc-yake ../.vimrc-yake
 ln -sf ~/.vimrc-yake/.vimrc ~/.vimrc
 ln -sf ~/.vimrc-yake/.vimrc.bundles ~/.vimrc.bundles
 
