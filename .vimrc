@@ -11,7 +11,7 @@
 " }
 
 " UI {
-  set background=light
+  set background=dark
   syntax on
 
   set number
@@ -271,8 +271,8 @@
     let g:indent_guides_start_level = 2
 
     let g:indent_guides_auto_colors = 1
-    " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-    " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+    autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=240
   " }
 
   " AutoCloseTag {
