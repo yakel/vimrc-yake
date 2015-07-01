@@ -1,0 +1,9 @@
+" use the system pasteboard
+set pasteboard
+
+" hide status line
+set laststatus=0
+
+" use relative number
+set relativenumber
+
