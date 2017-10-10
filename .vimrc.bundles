@@ -46,6 +46,10 @@
   Plugin 'honza/vim-snippets'
 " }
 
+" Mina {
+  Plugin 'chemzqm/wxapp.vim'
+" }
+
 " Rails {
   Plugin 'tpope/vim-rails'
   Plugin 'tpope/vim-bundler'

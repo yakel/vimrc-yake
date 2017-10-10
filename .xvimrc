@@ -2,7 +2,7 @@
 set pasteboard
 
 " hide status line
-set laststatus=0
+set laststatus=0    " Alway show the statusline
 
 " use relative number
 set relativenumber
