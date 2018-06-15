@@ -47,16 +47,20 @@
 " }
 
 " Mina {
-  Plugin 'chemzqm/wxapp.vim'
+  " Plugin 'chemzqm/wxapp.vim'
+" }
+
+" Python {
+  Plugin 'Python-mode-klen'
 " }
 
 " Rails {
-  Plugin 'tpope/vim-rails'
-  Plugin 'tpope/vim-bundler'
+  " Plugin 'tpope/vim-rails'
+  " Plugin 'tpope/vim-bundler'
 " }
 
 " Markdown {
-  Plugin 'suan/vim-instant-markdown'
+  " Plugin 'suan/vim-instant-markdown'
 " }
 
 " Candidate {
@@ -67,7 +71,6 @@
 " Ever {
   " Plugin 'Shougo/neocomplete.vim'
   " Plugin 'greyblake/vim-preview'
-  " Plugin 'klen/python-mode'     " Python
   " Plugin 'vim-scripts/HTML-AutoCloseTag'  " HTML
 " }
 
